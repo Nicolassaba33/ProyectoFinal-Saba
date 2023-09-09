@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Otukera - Tienda Manga</title>
+    <!-- Link a SweetAlert -->
+    <link rel="stylesheet" href="sweetalert2.min.css" />
+    <!-- Link a Css  -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+    <!-- Box Icons  -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="nav container">
+        <a href="#" class="logo">La Otukera</a>
+        <!-- Cart-Icon -->
+        <i class="bx bxs-shopping-bag" id="cart-icon">0</i>
+        <!-- Cart -->
+        <div class="cart">
+          <h2 class="cart-title">Sus pedidos</h2>
+          <!-- Content -->
+          <div class="cart-content"></div>
+
+          <!-- Total -->
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+          </div>
+
+          <!-- Compra -->
+          <button type="button" class="btn-buy">Comprar Ahora</button>
+
+          <!-- Cart-Close -->
+          <i class="bx bx-x" id="close-cart"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Shop -->
+    <section class="shop container">
+      <h2 class="section-title">Mangas Destacados</h2>
+
+      <!-- Contenido -->
+      <div class="shop-content">
+        <!-- Manga 1  -->
+        <div class="product-box">
+          <img
+            src="img/9788417292669.png"
+            alt="MyHeroeAcademy"
+            class="product-img"
+          />
+          <h2 class="product-title">My Heroe Academy</h2>
+          <span class="price">$4300</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- Manga 2 -->
+        <div class="product-box">
+          <img
+            src="img/AttackOnTitan.jpg"
+            alt="AttackOnTitan"
+            class="product-img"
+          />
+          <h2 class="product-title">Attack On Titan</h2>
+          <span class="price">$5200</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- Manga 3 -->
+        <div class="product-box">
+          <img src="img/DeathNote.jpg" alt="DeathNote" class="product-img" />
+          <h2 class="product-title">Death Note</h2>
+          <span class="price">$6300</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- Manga 4 -->
+        <div class="product-box">
+          <img src="img/TokyoGhoul.jpg" alt="TokyoGhoul" class="product-img" />
+          <h2 class="product-title">Tokyo Ghoul</h2>
+          <span class="price">$1300</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- Manga 5 -->
+        <div class="product-box">
+          <img src="img/OnePiece.webp" alt="OnePiece" class="product-img" />
+          <h2 class="product-title">One Piece</h2>
+          <span class="price">$3700</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- Manga 6 -->
+        <div class="product-box">
+          <img src="img/Naruto.webp" alt="Naruto" class="product-img" />
+          <h2 class="product-title">Naruto</h2>
+          <span class="price">$2900</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- Manga 7 -->
+        <div class="product-box">
+          <img src="img/Db.webp" alt="DragonBall" class="product-img" />
+          <h2 class="product-title">Dragon Ball</h2>
+          <span class="price">$2750</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- Manga 8 -->
+        <div class="product-box">
+          <img
+            src="img/JujutsuKaisen.webp"
+            alt="JujutsuKaisen"
+            class="product-img"
+          />
+          <h2 class="product-title">Jujutsu Kaisen</h2>
+          <span class="price">$2300</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Link a JS  -->
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
