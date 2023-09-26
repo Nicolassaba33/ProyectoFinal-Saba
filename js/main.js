@@ -1,8 +1,26 @@
+const url = "../mangas.json";
+
+let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+fetch(url)
+  .then((response) => response.json())
+  .then((data) => {
+    for (let i = 0; i < data.length; i++) {
+      let element = document.getElementsByClassName("product-title")[i];
+      let elementPrice = document.getElementsByClassName("price")[i];
+      element.innerHTML = `${data[i].title}`;
+      elementPrice.innerHTML = `${data[i].price}`;
+    }
+  })
+  .catch((err) => console.log(err));
+
 //Cart
 let cartIcon = document.querySelector("#cart-icon");
 let cart = document.querySelector(".cart");
 let closeCart = document.querySelector("#close-cart");
 let cartItemCount = 0;
+
 //Abrir Cart
 cartIcon.onclick = () => {
   cart.classList.add("active");
@@ -84,6 +102,7 @@ async function buyButtonClicked() {
 function updateCartItemCount() {
   let cartItemCountElement = document.querySelector("#cart-icon");
   cartItemCountElement.textContent = cartItemCount.toString();
+  localStorage.setItem("cartItemCount", cartItemCount.toString());
 }
 
 //Agregar Carta
@@ -142,6 +161,8 @@ function addProductToCart(title, price, productImg) {
   cartShopBox
     .getElementsByClassName("cart-quantity")[0]
     .addEventListener("change", quantityChanged);
+
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
 }
 function removeCartItem(event) {
   let buttonClicked = event.target;
@@ -149,6 +170,7 @@ function removeCartItem(event) {
   updateTotal();
   cartItemCount--;
   updateCartItemCount();
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
 }
 
 function quantityChanged(event) {
@@ -158,6 +180,7 @@ function quantityChanged(event) {
   }
   updateTotal();
 }
+
 // Actualizar Total de Precio
 function updateTotal() {
   let cartContent = document.getElementsByClassName("cart-content")[0];

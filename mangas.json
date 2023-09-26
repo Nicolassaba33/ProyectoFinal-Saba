@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "My Heroe Academy",
+    "price": "$4300"
+  },
+  {
+    "id": 2,
+    "title": "Attack On Titan",
+    "price": "$5200"
+  },
+  {
+    "id": 3,
+    "title": "Death Note",
+    "price": "$6300"
+  },
+  {
+    "id": 4,
+    "title": "Tokyo Ghoul",
+    "price": "$1300"
+  },
+  {
+    "id": 5,
+    "title": "One Piece",
+    "price": "$3700"
+  },
+  {
+    "id": 6,
+    "title": "Naruto",
+    "price": "$2900"
+  },
+  {
+    "id": 7,
+    "title": "Dragon Ball",
+    "price": "$2750"
+  },
+  {
+    "id": 8,
+    "title": "Jujutsu Kaisen",
+    "price": "$2300"
+  }
+]
