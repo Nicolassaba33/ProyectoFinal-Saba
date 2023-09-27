@@ -1,7 +1,6 @@
 const url = "../mangas.json";
 
 let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
 fetch(url)
   .then((response) => response.json())
@@ -99,10 +98,13 @@ async function buyButtonClicked() {
   }
 }
 
+function saveCartToLocalStorage() {
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+}
+
 function updateCartItemCount() {
   let cartItemCountElement = document.querySelector("#cart-icon");
   cartItemCountElement.textContent = cartItemCount.toString();
-  localStorage.setItem("cartItemCount", cartItemCount.toString());
 }
 
 //Agregar Carta
@@ -161,16 +163,16 @@ function addProductToCart(title, price, productImg) {
   cartShopBox
     .getElementsByClassName("cart-quantity")[0]
     .addEventListener("change", quantityChanged);
-
-  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  saveCartToLocalStorage();
 }
+
 function removeCartItem(event) {
   let buttonClicked = event.target;
   buttonClicked.parentElement.remove();
   updateTotal();
   cartItemCount--;
   updateCartItemCount();
-  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  saveCartToLocalStorage();
 }
 
 function quantityChanged(event) {
